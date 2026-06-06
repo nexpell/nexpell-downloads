@@ -1,0 +1,60 @@
+<?php
+
+$language_array = Array(
+
+    // Frontend
+    'title'                 => 'Downloads',
+    'downloads'             => 'Downloads',
+    'upload_file'           => 'Datei hochladen',
+    'description'           => 'Beschreibung',
+    'category'              => 'Kategorie',
+    'file_info'             => 'Datei-Info',
+    'uploaded_at'           => 'Hochgeladen am',
+    'last_update'           => 'Zuletzt aktualisiert',
+    'download_now'          => 'Jetzt herunterladen',
+    'details_download'      => 'Details & Downloads',
+    'download_area'         => 'Download Area',
+    'download_area_subtitle'=> 'Download-Dateien, Anleitungen und Ressourcen',
+    'files_label'           => 'Dateien',
+    'categories_label'      => 'Kategorien',
+    'downloads_label'       => 'Herunterladen',
+    'total_size'            => 'Gesamtgroesse',
+    'all_categories'        => 'Alle Kategorien',
+    'files_in_this_category'=> 'Dateien in dieser Kategorie',
+    'latest_files'          => 'Neueste Dateien',
+    'most_downloaded'       => 'Meist heruntergeladen',
+    'files_and_resources'   => 'Dateien und Ressourcen',
+    'category_overview_text'=> 'Alle Dateien und Ressourcen dieser Kategorie in einer gemeinsamen Uebersicht.',
+    'no_categories_available' => 'Keine Kategorien verfuegbar.',
+    'no_downloads_available' => 'Keine Downloads verfuegbar.',
+    'no_downloads_in_this_category' => 'Keine Downloads in dieser Kategorie verfuegbar.',
+    'file_singular'         => 'Datei',
+    'file_plural'           => 'Dateien',
+
+    // Backend
+    'title_top10'           => 'Top 10 Downloads',
+    'title_last50'          => 'Letzte 50 Downloads',
+    'subtitle_ranking'      => 'Ranking nach Anzahl',
+    'subtitle_newest'       => 'Neueste zuerst',
+    'th_dl_title'           => 'Download-Titel',
+    'th_filename'           => 'Dateiname',
+    'info_chart_no_data'    => 'Keine Daten für den Chart.',
+    'select_category'       => 'Kategorie auswählen',
+    'access_roles'          => 'Zugriffsrollen',
+    'admin_area'            => 'Adminbereich',
+    'download_count'        => 'Zugriffe',
+    'btn_dl_statistic'      => 'Download Statistiken',
+    'title_manage_dl'       => 'Downloads verwalten',
+    'select_pls_choose'     => 'Bitte wählen',
+    'label_edit_file'       => 'Datei ersetzen',
+    'label_file'            => 'Datei',
+    'label_title'           => 'Titel',
+    'label_current_file'    => 'Aktuelle Datei',
+    'label_access'          => 'Zugriffsrechte',
+    'label_info'            => 'Hinweise',
+    'invalid_feedback'      => 'Bitte mindestens die Rolle „Gast“ auswählen (oder eine andere Rolle).',
+    'info_datatypes'        => '<li>Erlaubte Dateitypen: <code>.zip</code>, <code>.pdf</code>, <code>.jpg</code>, <code>.png</code></li>
+            <li>Bei „Bearbeiten“ bleibt die Datei erhalten, wenn du keine neue auswählst.</li>
+            <li>Zugriff über Rollen steuern (Mehrfachauswahl möglich).</li>',
+);
+?>

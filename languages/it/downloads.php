@@ -1,0 +1,60 @@
+<?php
+
+$language_array = Array(
+
+    // Frontend
+    'title'                 => 'Download',
+    'downloads'             => 'Download',
+    'upload_file'           => 'Carica file',
+    'description'           => 'Descrizione',
+    'category'              => 'Categoria',
+    'file_info'             => 'Informazioni file',
+    'uploaded_at'           => 'Caricato il',
+    'last_update'           => 'Ultimo aggiornamento',
+    'download_now'          => 'Scarica ora',
+    'details_download'      => 'Dettagli e download',
+    'download_area'         => 'Area Download',
+    'download_area_subtitle'=> 'Scarica file, guide e risorse',
+    'files_label'           => 'File',
+    'categories_label'      => 'Categorie',
+    'downloads_label'       => 'Download',
+    'total_size'            => 'Dimensione totale',
+    'all_categories'        => 'Tutte le categorie',
+    'files_in_this_category'=> 'File in questa categoria',
+    'latest_files'          => 'File piu recenti',
+    'most_downloaded'       => 'Piu scaricati',
+    'files_and_resources'   => 'File e risorse',
+    'category_overview_text'=> 'Tutti i file e le risorse di questa categoria in una panoramica comune.',
+    'no_categories_available' => 'Nessuna categoria disponibile.',
+    'no_downloads_available' => 'Nessun download disponibile.',
+    'no_downloads_in_this_category' => 'Nessun download disponibile in questa categoria.',
+    'file_singular'         => 'file',
+    'file_plural'           => 'file',
+
+    // Backend
+    'title_top10'           => 'Top 10 download',
+    'title_last50'          => 'Ultimi 50 download',
+    'subtitle_ranking'      => 'Classifica per numero',
+    'subtitle_newest'       => 'Più recenti per primi',
+    'th_dl_title'           => 'Titolo del download',
+    'th_filename'           => 'Nome file',
+    'info_chart_no_data'    => 'Nessun dato disponibile per il grafico.',
+    'select_category'       => 'Seleziona categoria',
+    'access_roles'          => 'Ruoli di accesso',
+    'admin_area'            => 'Area amministrativa',
+    'download_count'        => 'Download',
+    'btn_dl_statistic'      => 'Statistiche download',
+    'title_manage_dl'       => 'Gestisci download',
+    'select_pls_choose'     => 'Seleziona',
+    'label_edit_file'       => 'Sostituisci file',
+    'label_file'            => 'File',
+    'label_title'           => 'Titolo',
+    'label_current_file'    => 'File attuale',
+    'label_access'          => 'Permessi di accesso',
+    'label_info'            => 'Note',
+    'invalid_feedback'      => 'Seleziona almeno il ruolo “Ospite” (oppure un altro ruolo).',
+    'info_datatypes'        => '<li>Tipi di file consentiti: <code>.zip</code>, <code>.pdf</code>, <code>.jpg</code>, <code>.png</code></li>
+            <li>In modalità modifica, il file viene mantenuto se non ne selezioni uno nuovo.</li>
+            <li>L’accesso può essere controllato tramite ruoli (selezione multipla possibile).</li>',
+);
+?>
