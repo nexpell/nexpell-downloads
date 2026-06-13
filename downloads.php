@@ -273,7 +273,7 @@ if (!function_exists('downloads_render_breadcrumb')) {
 }
 
 if (!function_exists('downloads_render_info_alert')) {
-    function downloads_render_info_alert($languageService, string $key, string $fallback = 'Keine Eintraege verfuegbar.'): void
+    function downloads_render_info_alert($languageService, string $key, string $fallback = 'Keine Einträge verfügbar.'): void
     {
         $message = $fallback;
 
