@@ -31,41 +31,6 @@ PluginInstallerHelper::install([
         'downloads'
     ],
 
-    'tables' => [
-
-        'plugins_downloads_categories' => '
-            categoryID INT(11) NOT NULL AUTO_INCREMENT,
-            title VARCHAR(255) NOT NULL,
-            description TEXT DEFAULT NULL,
-            PRIMARY KEY (categoryID)
-        ',
-
-        'plugins_downloads' => '
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            categoryID INT NOT NULL,
-            userID INT NOT NULL DEFAULT 0,
-            title VARCHAR(255) NOT NULL,
-            description TEXT,
-            file VARCHAR(255) NOT NULL,
-            downloads INT DEFAULT 0,
-            access_roles TEXT,
-            uploaded_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-            KEY idx_categoryID (categoryID),
-            KEY idx_userID (userID)
-        ',
-
-        'plugins_downloads_logs' => '
-            logID INT(11) NOT NULL AUTO_INCREMENT,
-            userID INT(11) NOT NULL,
-            fileID INT(11) NOT NULL,
-            downloaded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-            PRIMARY KEY (logID),
-            KEY userID (userID),
-            KEY fileID (fileID)
-        '
-    ],
-
     'admin_navigation' => [
         [
             'url'   => 'admincenter.php?site=admin_downloads',
@@ -94,3 +59,41 @@ PluginInstallerHelper::install([
     ]
 
 ]);
+
+safe_query("
+CREATE TABLE IF NOT EXISTS plugins_downloads_categories (
+    categoryID INT(11) NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description TEXT DEFAULT NULL,
+    PRIMARY KEY (categoryID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+");
+
+safe_query("
+CREATE TABLE IF NOT EXISTS plugins_downloads (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    categoryID INT NOT NULL,
+    userID INT NOT NULL DEFAULT 0,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    file VARCHAR(255) NOT NULL,
+    downloads INT DEFAULT 0,
+    access_roles TEXT,
+    uploaded_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    KEY idx_categoryID (categoryID),
+    KEY idx_userID (userID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+");
+
+safe_query("
+CREATE TABLE IF NOT EXISTS plugins_downloads_logs (
+    logID INT(11) NOT NULL AUTO_INCREMENT,
+    userID INT(11) NOT NULL,
+    fileID INT(11) NOT NULL,
+    downloaded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (logID),
+    KEY userID (userID),
+    KEY fileID (fileID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+");
