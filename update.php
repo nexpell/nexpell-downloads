@@ -10,38 +10,34 @@ $modulname = 'downloads';
 $version   = (string)($plugin['version'] ?? '0.0.0');
 $str       = 'Downloads';
 
-PluginInstallerHelper::addColumnIfMissing(
-    'plugins_downloads',
-    'downloads',
-    'INT DEFAULT 0 AFTER file'
-);
+safe_query("
+    ALTER TABLE plugins_downloads
+    ADD COLUMN downloads INT DEFAULT 0 AFTER file
+");
 
-PluginInstallerHelper::addColumnIfMissing(
-    'plugins_downloads',
-    'userID',
-    'INT NOT NULL DEFAULT 0 AFTER categoryID'
-);
+safe_query("
+    ALTER TABLE plugins_downloads
+    ADD COLUMN userID INT NOT NULL DEFAULT 0 AFTER categoryID
+");
 
-PluginInstallerHelper::addIndexIfMissing(
-    'plugins_downloads',
-    'idx_userID',
-    '(userID)'
-);
+safe_query("
+    ALTER TABLE plugins_downloads
+    ADD INDEX idx_userID (userID)
+");
 
-PluginInstallerHelper::addColumnIfMissing(
-    'plugins_downloads',
-    'access_roles',
-    'TEXT AFTER downloads'
-);
+safe_query("
+    ALTER TABLE plugins_downloads
+    ADD COLUMN access_roles TEXT AFTER downloads
+");
 
-PluginInstallerHelper::addColumnIfMissing(
-    'plugins_downloads',
-    'uploaded_at',
-    'DATETIME DEFAULT CURRENT_TIMESTAMP AFTER access_roles'
-);
+safe_query("
+    ALTER TABLE plugins_downloads
+    ADD COLUMN uploaded_at DATETIME DEFAULT CURRENT_TIMESTAMP AFTER access_roles
+");
 
-PluginInstallerHelper::addColumnIfMissing(
-    'plugins_downloads',
-    'updated_at',
-    'DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER uploaded_at'
-);
+safe_query("
+    ALTER TABLE plugins_downloads
+    ADD COLUMN updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    ON UPDATE CURRENT_TIMESTAMP
+    AFTER uploaded_at
+");
