@@ -7,11 +7,8 @@ if (!function_exists('safe_query')) {
 global $str, $modulname, $version, $plugin;
 
 $modulname = 'downloads';
-$version   = (string)($plugin['version'] ?? '1.0.4');
+$version   = (string)($plugin['version'] ?? '0.0.0');
 $str       = 'Downloads';
-
-echo '<div class="card"><div class="card-body">';
-echo '<h4>Update: ' . htmlspecialchars($str) . ' (' . htmlspecialchars($version) . ')</h4>';
 
 PluginInstallerHelper::addColumnIfMissing(
     'plugins_downloads',
@@ -48,6 +45,3 @@ PluginInstallerHelper::addColumnIfMissing(
     'updated_at',
     'DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER uploaded_at'
 );
-
-echo '<div class="alert alert-success">Downloads Plugin aktualisiert.</div>';
-echo '</div></div>';
